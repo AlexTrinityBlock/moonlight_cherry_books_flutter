@@ -48,7 +48,7 @@ class _BookReadingPageState extends State<BookReadingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar1(),
+      // appBar: AppBar1(),
       body: Center(
         child: ListView(
           children: [

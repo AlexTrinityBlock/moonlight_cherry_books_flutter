@@ -25,6 +25,45 @@ class _HomePageState extends State<HomePage> {
     LibraryPage(), // 圖書館頁面
   ];
   
+  @override
+  void initState() {
+    super.initState();
+    // 使用 WidgetsBinding 確保在第一個 frame 繪製完成後顯示對話框
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _showWelcomeDialog();
+    });
+  }
+  
+  // 顯示歡迎對話框
+  void _showWelcomeDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('歡迎來到 Moonlight Cherry Books 書城'),
+          content: const Text('這邊收藏的書籍都是版權已經進入 Public Domain 的書籍，憂盡情享受，希望您能享受閱讀的樂趣！'),
+          actions: <Widget>[
+            // 使用Container包裹按鈕並設置寬度為100%來實現置中
+            Container(
+              width: double.infinity,
+              alignment: Alignment.center,
+              child: TextButton(
+                child: const Text('確定'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ),
+          ],
+          // 設置內部內容的邊距，讓按鈕和內容有更好的間隔
+          contentPadding: const EdgeInsets.fromLTRB(24, 20, 24, 0),
+          // 設置按鈕區域的邊距，調整按鈕位置
+          actionsPadding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
+        );
+      },
+    );
+  }
+  
   // 當物件被點擊時
   void _onItemTapped(int index) {
     // 更新選定的頁面索引

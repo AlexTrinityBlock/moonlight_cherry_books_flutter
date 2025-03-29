@@ -17,13 +17,13 @@ List <Book> booksList = [
     coverImageUrl: 'assets/cover_images/History_of_the_Peloponnesian_War.jpg',
     fullTextPath: 'assets/book_full_text/History_of_the_Peloponnesian_War.txt',
   ),
-  Book(
-    id: 'lit3',
-    title: '麥琪的禮物',
-    author: '歐·亨利',
-    coverImageUrl: 'assets/cover_images/The_Gift_of_the_Magi.jpg',
-    fullTextPath: 'assets/book_full_text/The_Gift_of_the_Magi.txt',
-  ),
+  // Book(
+  //   id: 'lit3',
+  //   title: '麥琪的禮物',
+  //   author: '歐·亨利',
+  //   coverImageUrl: 'assets/cover_images/The_Gift_of_the_Magi.jpg',
+  //   fullTextPath: 'assets/book_full_text/The_Gift_of_the_Magi.txt',
+  // ),
   Book(
     id: 'phi4',
     title: '沉思錄',
