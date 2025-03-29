@@ -1,78 +1,85 @@
 name: moonlight_cherry_books_flutter
 description: "A new Flutter project."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+# 以下行防止使用 `flutter pub publish` 意外將套件發布到 pub.dev。這對私有套件是首選。
+publish_to: 'none' # 如果你希望發布到 pub.dev，移除此行
 
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
-# Read more about iOS versioning at
+# 以下定義了應用程式的版本和構建號。
+# 版本號是由點分隔的三個數字，如 1.2.43
+# 後面可以跟一個由 + 分隔的可選構建號。
+# 在 flutter build 中可以通過指定 --build-name 和 --build-number 來覆蓋版本和構建號。
+# 在 Android 中，build-name 用作 versionName，而 build-number 用作 versionCode。
+# 有關 Android 版本控制的更多信息請查看 https://developer.android.com/studio/publish/versioning
+# 在 iOS 中，build-name 用作 CFBundleShortVersionString，而 build-number 用作 CFBundleVersion。
+# 有關 iOS 版本控制的更多信息請查看
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-# In Windows, build-name is used as the major, minor, and patch parts
-# of the product and file versions while build-number is used as the build suffix.
+# 在 Windows 中，build-name 用作產品和文件版本的主要、次要和補丁部分，而 build-number 用作構建後綴。
 version: 1.0.0+1
 
 environment:
   sdk: ^3.7.2
 
-# Dependencies specify other packages that your package needs in order to work.
-# To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
-# dependencies can be manually updated by changing the version numbers below to
-# the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
+# 依賴項指定你的套件需要哪些其他套件才能工作。
+# 要自動將套件依賴項升級到最新版本，
+# 考慮運行 `flutter pub upgrade --major-versions`。或者，
+# 可以通過將下面的版本號更改為可用的最新版本來手動更新依賴項。
+# 要查看哪些依賴項有更新版本可用，運行 `flutter pub outdated`。
 dependencies:
   flutter:
     sdk: flutter
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  # 以下添加了 Cupertino Icons 字體到你的應用程式。
+  # 與 CupertinoIcons 類一起使用，用於 iOS 風格圖標。
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
+  # 下方的 "flutter_lints" 套件包含一系列推薦的 lint 規則，
+  # 以鼓勵良好的編碼實踐。套件提供的 lint 集合
+  # 在位於套件根目錄的 `analysis_options.yaml` 文件中激活。
+  # 有關禁用特定 lint 規則和激活其他規則的信息，請參見該文件。
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+  
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/moon_icon.jpg" # 使用您現有的圖標
+  web:
+    generate: true
+    image_path: "assets/images/moon_icon.jpg"
+  windows:
+    generate: true
+    image_path: "assets/images/moon_icon.jpg"
+  macos:
+    generate: true
+    image_path: "assets/images/moon_icon.jpg"
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
+# 有關此文件中通用 Dart 部分的信息，請參見
+# 以下頁面: https://dart.dev/tools/pub/pubspec
 
-# The following section is specific to Flutter packages.
+# 以下部分特定於 Flutter 套件。
 flutter:
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
+  # 以下行確保 Material Icons 字體包含在你的應用程式中，
+  # 這樣你就可以使用 material Icons 類中的圖標。
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
+  # 要將資源添加到你的應用程式，添加一個 assets 部分，如下所示:
   assets:
     - assets/images/
-  #   - images/a_dot_ham.jpeg
 
-  # An image asset can refer to one or more resolution-specific "variants", see
+  # 一個圖像資源可以引用一個或多個解析度特定的"變體"，請參見
   # https://flutter.dev/to/resolution-aware-images
 
-  # For details regarding adding assets from package dependencies, see
+  # 有關從套件依賴項添加資源的詳細信息，請參見
   # https://flutter.dev/to/asset-from-package
 
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
+  # 要將自定義字體添加到你的應用程式，在這裡添加一個 fonts 部分，
+  # 在這個 "flutter" 部分。此列表中的每個條目都應該有一個
+  # "family" 鍵，帶有字體系列名稱，以及一個 "fonts" 鍵，帶有字體的
+  # 資源和其他描述符列表。例如:
   # fonts:
   #   - family: Schyler
   #     fonts:
@@ -85,5 +92,5 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/to/font-from-package
+  # 有關從套件依賴項添加字體的詳細信息，
+  # 請參見 https://flutter.dev/to/font-from-package

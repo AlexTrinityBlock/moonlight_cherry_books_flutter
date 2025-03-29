@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Moon light Cherry Books',
+      title: 'Moon Light Cherry Books',
       theme: ThemeData(
         // 主題色彩
         // 會影響AppBar

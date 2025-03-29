@@ -15,7 +15,7 @@ class AppBar1 extends StatelessWidget implements PreferredSizeWidget{
   Widget build(BuildContext context){
     return AppBar(
       title: const Text(
-        'Moon light Cherry 書城',
+        'Moon Light Cherry 書城',
         style: TextStyle(
           color: Color.fromARGB(255, 39, 35, 67)
         ),

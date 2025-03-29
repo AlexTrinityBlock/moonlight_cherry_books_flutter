@@ -1,11 +1,11 @@
 // 每日推薦書資料類型
-class DailyRecommendationBook {
+class Book {
   String id;
   String title;
   String author;
   String coverImageUrl;
 
-  DailyRecommendationBook({
+  Book({
     required this.id,
     required this.title,
     required this.author,
