@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moonlight_cherry_books_flutter/datas/book.dart';
+import 'package:moonlight_cherry_books_flutter/widgets/book_card.dart';
 
 // 歷史類書籍模擬數據
 List<Book> historyBooks = [
@@ -59,63 +60,10 @@ class HistoryCategoryHorizontalScrollable extends StatelessWidget {
             itemBuilder: (context, index) {
               final book = historyBooks[index];
               
-              return Container(
-                width: 150,
-                margin: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: Card(
-                  elevation: 4,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      // 書籍封面
-                      Expanded(
-                        flex: 6,
-                        child: ClipRRect(
-                          borderRadius: const BorderRadius.vertical(top: Radius.circular(4)),
-                          child: Image.asset(
-                            book.coverImageUrl,
-                            fit: BoxFit.cover,
-                            width: double.infinity,
-                            height: double.infinity,
-                            errorBuilder: (context, error, stackTrace) {
-                              return Container(
-                                color: Colors.grey[200],
-                                child: const Center(
-                                  child: Icon(Icons.book, size: 60, color: Colors.grey),
-                                ),
-                              );
-                            },
-                          ),
-                        ),
-                      ),
-                      // 書籍標題
-                      Expanded(
-                        flex: 2,
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                          child: Text(
-                            book.title,
-                            style: const TextStyle(fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.center,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ),
-                      ),
-                      // 書籍作者
-                      Expanded(
-                        flex: 2,
-                        child: Padding(
-                          padding: const EdgeInsets.only(bottom: 8.0, left: 8.0, right: 8.0),
-                          child: Text(
-                            book.author,
-                            style: const TextStyle(fontSize: 12, color: Colors.grey),
-                            textAlign: TextAlign.center,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+              return SizedBox(
+                width: 170,
+                child: BookCard(
+                  book: book,
                 ),
               );
             },

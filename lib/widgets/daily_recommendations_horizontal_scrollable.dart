@@ -83,72 +83,13 @@ class DailyRecommendationsHorizontalScrollable extends StatelessWidget {
               // 獲取當前索引的書籍對象
               final book = booksList[index];
               
-              // 返回一個容器
-              return Container(
+              // 返回一個固定寬度的容器，內含BookCard組件
+              return SizedBox(
                 // 設置容器寬度為150像素
-                width: 150,
-                // 設置水平方向的外邊距為8像素
-                margin: const EdgeInsets.symmetric(horizontal: 8.0),
-                // 卡片組件，用於顯示書籍
-                child: Card(
-                  // 設置卡片陰影高度為4
-                  elevation: 4,
-                  // 使用Column縱向排列書籍信息組件
-                  child: Column(
-                    // 主軸居中對齊
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      // 書籍封面
-                      Expanded(
-                        flex: 6, // 佔據70%的空間
-                        child: ClipRRect(
-                          // 添加圓角裁剪，讓圖片更美觀
-                          borderRadius: const BorderRadius.vertical(top: Radius.circular(4)),
-                          child: Image.asset(
-                            book.coverImageUrl, // 使用書籍的封面圖片URL
-                            fit: BoxFit.cover, // 變更為cover以填滿整個區域
-                            width: double.infinity, // 確保寬度填滿
-                            height: double.infinity, // 確保高度填滿
-                            errorBuilder: (context, error, stackTrace) {
-                              // 如果圖片加載失敗，顯示佔位圖標
-                              return Container(
-                                color: Colors.grey[200],
-                                child: const Center(
-                                  child: Icon(Icons.book, size: 60, color: Colors.grey),
-                                ),
-                              );
-                            },
-                          ),
-                        ),
-                      ),
-                      // 書籍標題
-                      Expanded(
-                        flex: 2, // 佔據20%的空間
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                          child: Text(
-                            book.title, // 顯示書籍標題
-                            style: const TextStyle(fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.center,
-                            overflow: TextOverflow.ellipsis, // 文本過長時顯示省略號
-                          ),
-                        ),
-                      ),
-                      // 書籍作者
-                      Expanded(
-                        flex: 2, // 佔據10%的空間
-                        child: Padding(
-                          padding: const EdgeInsets.only(bottom: 8.0, left: 8.0, right: 8.0),
-                          child: Text(
-                            book.author, // 顯示書籍作者
-                            style: const TextStyle(fontSize: 12, color: Colors.grey),
-                            textAlign: TextAlign.center,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                width: 170,
+                // 使用BookCard組件顯示書籍
+                child: BookCard(
+                  book: book,
                 ),
               );
             },
