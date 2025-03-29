@@ -43,7 +43,7 @@ class BookCard extends StatelessWidget {
               // 書籍封面區域
               Expanded(
                 // 佔據70%的空間
-                flex: 6,
+                flex: 15,
                 child: ClipRRect(
                   // 添加圓角裁剪，讓圖片更美觀
                   borderRadius: const BorderRadius.vertical(top: Radius.circular(4)),
