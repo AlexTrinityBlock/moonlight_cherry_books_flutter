@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:moonlight_cherry_books_flutter/pages/history_category_page.dart';
+import 'package:moonlight_cherry_books_flutter/pages/literature_category_page.dart';
 import 'package:moonlight_cherry_books_flutter/widgets/book_category_card.dart';
 
 List<BookCategoryCard> bookCategoryCards = [
   BookCategoryCard(
-    bookCategoryName: '文學',
+    bookCategoryName: '文學類',
     bookCategoryIcon: Icons.menu_book,
     bookCategoryColor: Colors.white,
-    // bookCategoryColor: Colors.pink.shade50,
+    bookCategoryPage: LiteratureCategoryPage(),
   ),
   BookCategoryCard(
-    bookCategoryName: '哲學',
+    bookCategoryName: '歷史類',
     bookCategoryIcon: Icons.auto_stories,
     bookCategoryColor: Colors.white,
-    // bookCategoryColor: Colors.blue.shade50,
+    bookCategoryPage: HistoryCategoryPage(),
   ),
   BookCategoryCard(
-    bookCategoryName: '小說',
+    bookCategoryName: '哲學類',
     bookCategoryIcon: Icons.bookmark,
     bookCategoryColor: Colors.white,
-    // bookCategoryColor: Colors.green.shade50,
+    bookCategoryPage: LiteratureCategoryPage(),
   ),
 ];
 

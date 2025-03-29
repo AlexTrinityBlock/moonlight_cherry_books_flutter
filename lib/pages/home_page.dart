@@ -41,6 +41,13 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar1(), // 使用自定義應用欄
       body: _pages[_selectedIndex], // 使用獨立切分的下方導航欄元件
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color.fromARGB(255, 186, 232, 232), // 導航欄背景顏色
+        iconSize: 28, // 增加圖標大小
+        selectedFontSize: 14, // 選中項目的字體大小
+        unselectedFontSize: 12, // 未選中項目的字體大小
+        selectedLabelStyle: const TextStyle(height: 2.0), // 標籤行高
+        unselectedLabelStyle: const TextStyle(height: 2.0), // 標籤行高
+        type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.star),
