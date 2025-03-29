@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('歡迎來到 Moonlight Cherry Books 書城'),
-          content: const Text('這邊收藏的書籍都是版權已經進入 Public Domain 的書籍，憂盡情享受，希望您能享受閱讀的樂趣！'),
+          content: const Text('這邊收藏的書籍都是版權已經進入 Public Domain 的書籍，希望您能享受閱讀的樂趣！'),
           actions: <Widget>[
             SizedBox(
               height: 16.0,
