@@ -6,27 +6,17 @@ import 'package:moonlight_cherry_books_flutter/widgets/book_card.dart';
 List<Book> historyBooks = [
   Book(
     id: 'his1',
-    title: '人類簡史',
-    author: '尤瓦爾·赫拉利',
-    coverImageUrl: 'assets/images/moke_book_icon.jpg',
+    title: '希羅多德的埃及記述',
+    author: '希羅多德',
+    coverImageUrl: 'assets/cover_images/An_Account_of_Egypt.jpg',
+    fullTextPath: 'assets/book_full_text/An_Account_of_Egypt.txt',
   ),
   Book(
     id: 'his2',
-    title: '史記',
-    author: '司馬遷',
-    coverImageUrl: 'assets/images/moke_book_icon.jpg',
-  ),
-  Book(
-    id: 'his3',
-    title: '第二次世界大戰史',
-    author: '溫斯頓·邱吉爾',
-    coverImageUrl: 'assets/images/moke_book_icon.jpg',
-  ),
-  Book(
-    id: 'his4',
-    title: '資治通鑑',
-    author: '司馬光',
-    coverImageUrl: 'assets/images/moke_book_icon.jpg',
+    title: '伯羅奔尼撒戰爭史',
+    author: '修昔底德',
+    coverImageUrl: 'assets/cover_images/History_of_the_Peloponnesian_War.jpg',
+    fullTextPath: 'assets/book_full_text/History_of_the_Peloponnesian_War.txt',
   ),
 ];
 
@@ -43,29 +33,21 @@ class HistoryCategoryHorizontalScrollable extends StatelessWidget {
           padding: EdgeInsets.all(16.0),
           child: Text(
             '歷史類',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
         ),
-        
+
         // 書籍列表
         SizedBox(
-          height: 200,
+          height: 250,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             physics: const ClampingScrollPhysics(),
             itemCount: historyBooks.length,
             itemBuilder: (context, index) {
               final book = historyBooks[index];
-              
-              return SizedBox(
-                width: 170,
-                child: BookCard(
-                  book: book,
-                ),
-              );
+
+              return SizedBox(width: 170, child: BookCard(book: book));
             },
           ),
         ),

@@ -11,25 +11,25 @@ import 'package:moonlight_cherry_books_flutter/widgets/book_card.dart';
 List <Book> booksList = [
   // 定義一個書籍列表，包含每日推薦的書籍數據
   Book(
-    id: '1',
-    title: '書籍1',
-    author: '作者1',
-    coverImageUrl: 'assets/images/moke_book_icon.jpg',
-    fullTextPath: 'assets/book_full_text/lit1.txt',
+    id: 'his2',
+    title: '伯羅奔尼撒戰爭史',
+    author: '修昔底德',
+    coverImageUrl: 'assets/cover_images/History_of_the_Peloponnesian_War.jpg',
+    fullTextPath: 'assets/book_full_text/History_of_the_Peloponnesian_War.txt',
   ),
-  
   Book(
-    id: '2',
-    title: '書籍2',
-    author: '作者2',
-    coverImageUrl: 'assets/images/moke_book_icon.jpg',
+    id: 'lit3',
+    title: '麥琪的禮物',
+    author: '歐·亨利',
+    coverImageUrl: 'assets/cover_images/The_Gift_of_the_Magi.jpg',
+    fullTextPath: 'assets/book_full_text/The_Gift_of_the_Magi.txt',
   ),
-
   Book(
-    id: '3',
-    title: '書籍3',
-    author: '作者3s',
-    coverImageUrl: 'assets/images/moke_book_icon.jpg',
+    id: 'phi4',
+    title: '沉思錄',
+    author: '馬可·奧理略',
+    coverImageUrl: 'assets/cover_images/Meditations.jpg',
+    fullTextPath: 'assets/book_full_text/Meditations.txt',
   ),
 ];
 
@@ -70,7 +70,7 @@ class DailyRecommendationsHorizontalScrollable extends StatelessWidget {
         // 可自定義樣式的容器
         SizedBox(
           // 設置高度為200像素
-          height: 200,
+          height: 250,
           // 使用ListView.builder創建滾動列表
           child: ListView.builder(
             // 設置水平滾動方向

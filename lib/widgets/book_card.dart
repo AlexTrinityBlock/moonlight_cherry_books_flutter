@@ -56,6 +56,8 @@ class BookCard extends StatelessWidget {
                     width: double.infinity,
                     // 確保高度填滿
                     height: double.infinity,
+                    // 設置對齊方式為頂部居中，確保裁剪時保留上半部分
+                    alignment: Alignment.topCenter,
                     // 圖片加載失敗時的處理
                     errorBuilder: (context, error, stackTrace) {
                       // 顯示佔位圖標

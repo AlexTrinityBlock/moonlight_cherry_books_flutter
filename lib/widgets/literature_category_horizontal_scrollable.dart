@@ -13,15 +13,17 @@ List<Book> literatureBooks = [
   ),
   Book(
     id: 'lit3',
-    title: '紅樓夢',
-    author: '曹雪芹',
-    coverImageUrl: 'assets/images/moke_book_icon.jpg',
+    title: '麥琪的禮物',
+    author: '歐·亨利',
+    coverImageUrl: 'assets/cover_images/The_Gift_of_the_Magi.jpg',
+    fullTextPath: 'assets/book_full_text/The_Gift_of_the_Magi.txt',
   ),
   Book(
     id: 'lit4',
-    title: '戰爭與和平',
-    author: '列夫·托爾斯泰',
-    coverImageUrl: 'assets/images/moke_book_icon.jpg',
+    title: '洩密的心',
+    author: '愛倫·坡',
+    coverImageUrl: 'assets/cover_images/The_Tell_Tale_Heart.jpg',
+    fullTextPath: 'assets/book_full_text/The_Tell_Tale_Heart.txt',
   ),
 ];
 
@@ -47,7 +49,7 @@ class LiteratureCategoryHorizontalScrollable extends StatelessWidget {
         
         // 書籍列表
         SizedBox(
-          height: 200,
+          height: 250,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             physics: const ClampingScrollPhysics(),
