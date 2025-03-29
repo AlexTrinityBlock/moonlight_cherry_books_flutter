@@ -52,7 +52,11 @@ class _BookReadingPageState extends State<BookReadingPage> {
       body: Center(
         child: ListView(
           children: [
-            Image.asset(widget.book.coverImageUrl), // 顯示書籍封面圖片
+            Image.asset(
+              widget.book.coverImageUrl,
+              width: MediaQuery.of(context).size.width,
+              fit: BoxFit.cover,
+            ), // 顯示書籍封面圖片
             const SizedBox(height: 20),
             Center(
               child: Text(

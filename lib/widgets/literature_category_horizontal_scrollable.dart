@@ -8,7 +8,7 @@ List<Book> literatureBooks = [
     id: 'lit2',
     title: '傲慢與偏見',
     author: '簡·奧斯汀',
-    coverImageUrl: 'assets/images/moke_book_icon.jpg',
+    coverImageUrl: 'assets/cover_images/Pride_and_Prejudice.jpg',
     fullTextPath: 'assets/book_full_text/Pride_and_Prejudice.txt',
   ),
   Book(

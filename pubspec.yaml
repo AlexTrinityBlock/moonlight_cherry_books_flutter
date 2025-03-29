@@ -70,6 +70,7 @@ flutter:
   assets:
     - assets/images/
     - assets/book_full_text/
+    - assets/cover_images/
 
   # 一個圖像資源可以引用一個或多個解析度特定的"變體"，請參見
   # https://flutter.dev/to/resolution-aware-images
