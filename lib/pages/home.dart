@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
             const Padding(
               padding: EdgeInsets.all(16.0),
               child: Text(
-                'Hot books',
+                '本日推薦',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,

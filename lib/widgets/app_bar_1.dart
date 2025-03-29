@@ -20,6 +20,15 @@ class AppBar1 extends StatelessWidget implements PreferredSizeWidget{
           color: Color.fromARGB(255, 39, 35, 67)
         ),
       ),
+      // Leading ，採用圖片
+      // Leading 向右移動些
+      leading: Padding(
+        padding: const EdgeInsets.only(left: 20.0),
+        child: Image.asset(
+          'assets/images/leading.png',
+          fit: BoxFit.cover,
+        ),
+      ),
       // 背景顏色，採用色碼
       backgroundColor: Color.fromARGB(255, 186, 232, 232)
     );
