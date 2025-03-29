@@ -29,8 +29,8 @@ List<Book> historyBooks = [
   ),
 ];
 
-class HistoryCategory extends StatelessWidget {
-  const HistoryCategory({super.key});
+class HistoryCategoryHorizontalScrollable extends StatelessWidget {
+  const HistoryCategoryHorizontalScrollable({super.key});
 
   @override
   Widget build(BuildContext context) {
