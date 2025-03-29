@@ -43,15 +43,33 @@ class _HomePageState extends State<HomePage> {
           title: const Text('歡迎來到 Moonlight Cherry Books 書城'),
           content: const Text('這邊收藏的書籍都是版權已經進入 Public Domain 的書籍，憂盡情享受，希望您能享受閱讀的樂趣！'),
           actions: <Widget>[
+            SizedBox(
+              height: 16.0,
+            ),
             // 使用Container包裹按鈕並設置寬度為100%來實現置中
             Container(
               width: double.infinity,
-              alignment: Alignment.center,
-              child: TextButton(
-                child: const Text('確定'),
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  // backgroundColor: Colors.purple[700],
+                  // foregroundColor: Colors.white,
+                  minimumSize: const Size(double.infinity, 45), // 設置最小寬度為無限，高度為45
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 12.0),
+                ),
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
+                child: const Text(
+                  '確定',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
           ],
