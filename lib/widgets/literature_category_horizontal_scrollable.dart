@@ -5,16 +5,11 @@ import 'package:moonlight_cherry_books_flutter/widgets/book_card.dart';
 // 文學類書籍模擬數據
 List<Book> literatureBooks = [
   Book(
-    id: 'lit1',
-    title: '百年孤獨',
-    author: '加西亞·馬爾克斯',
-    coverImageUrl: 'assets/images/moke_book_icon.jpg',
-  ),
-  Book(
     id: 'lit2',
     title: '傲慢與偏見',
     author: '簡·奧斯汀',
     coverImageUrl: 'assets/images/moke_book_icon.jpg',
+    fullTextPath: 'assets/book_full_text/Pride_and_Prejudice.txt',
   ),
   Book(
     id: 'lit3',

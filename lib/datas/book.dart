@@ -4,11 +4,13 @@ class Book {
   String title;
   String author;
   String coverImageUrl;
+  String? fullTextPath;
 
   Book({
     required this.id,
     required this.title,
     required this.author,
     required this.coverImageUrl,
+    this.fullTextPath,
   });
 }

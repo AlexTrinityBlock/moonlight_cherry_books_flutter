@@ -15,6 +15,7 @@ List <Book> booksList = [
     title: '書籍1',
     author: '作者1',
     coverImageUrl: 'assets/images/moke_book_icon.jpg',
+    fullTextPath: 'assets/book_full_text/lit1.txt',
   ),
   
   Book(
